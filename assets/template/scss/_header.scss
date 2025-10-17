@@ -34,6 +34,7 @@ header {
     padding: 21px 18px 21px 18px;
     border: 0;
     @include border-radius(97px);
+    transition: all 0.3s ease;
     .dotes {
       display: flex;
       gap: 3px;
@@ -43,6 +44,16 @@ header {
         height: 4px;
         background-color: $black;
         @include border-radius(50%);
+        transition: all 0.3s ease;
+      }
+    }
+    &:hover {
+      color: $primary-2;
+      .dotes {
+        .dote {
+          transform: scale(1.2);
+          background-color: $primary-2;
+        }
       }
     }
   }

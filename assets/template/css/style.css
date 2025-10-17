@@ -15904,6 +15904,9 @@ body {
   transition: all 0.3s ease;
   stroke: #0d6efd;
 }
+.btn-read-more.btn-lg, .btn-group-lg > .btn-read-more.btn {
+  padding: 18px 18px 18px 18px;
+}
 
 .switch-input {
   border: 1px solid #0052ce;
@@ -16151,6 +16154,7 @@ header .btn-catalog {
   -moz-border-radius: 97px;
   -ms-border-radius: 97px;
   border-radius: 97px;
+  transition: all 0.3s ease;
 }
 header .btn-catalog .dotes {
   display: flex;
@@ -16165,6 +16169,14 @@ header .btn-catalog .dotes .dote {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+  transition: all 0.3s ease;
+}
+header .btn-catalog:hover {
+  color: #0052ce;
+}
+header .btn-catalog:hover .dotes .dote {
+  transform: scale(1.2);
+  background-color: #0052ce;
 }
 header .nav-menu {
   -webkit-border-radius: 97px;
