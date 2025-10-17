@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Petromatic</title>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex" />
+  <meta name="description" content="Petromatic" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="assets/template/css/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/template/css/fancybox.css">
+  <link rel="stylesheet" href="assets/template/css/style.css">
+</head>
+
+<body>
+  <section class="section-catalog-menu-toggle sectionCatalogMenuToggle">
+    <div class="wrapper">
+      <div class="container-fluid">
+        <button class="btn-close-text btnCloseCatalogToggle">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.4058 2.58887L13.936 3.11914L9.05518 8L13.936 12.8809L13.4058 13.4121L12.8755 13.9424L7.99365 9.06055L3.11279 13.9424L2.58252 13.4121L2.05225 12.8809L6.93311 8L2.05225 3.11914L2.58252 2.58887L3.11377 2.05859L7.99365 6.93848L12.8745 2.05859L13.4058 2.58887Z" />
+          </svg>
+          <span>Закрыть меню</span>
+        </button>
+        <ul class="nav nav-tabs" id="catalogTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="catalog-tab-1" data-bs-toggle="tab" data-bs-target="#catalog-tab-pane-1"
+              type="button" role="tab" aria-controls="catalog-tab-pane-1" aria-selected="true">Легковой портал</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="catalog-tab-2" data-bs-toggle="tab" data-bs-target="#catalog-tab-pane-2"
+              type="button" role="tab" aria-controls="catalog-tab-pane-2" aria-selected="false">Грузовой портал</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="catalog-tab-3" data-bs-toggle="tab" data-bs-target="#catalog-tab-pane-3"
+              type="button" role="tab" aria-controls="catalog-tab-pane-3" aria-selected="false">Проездные мойки</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="catalog-tab-4" data-bs-toggle="tab" data-bs-target="#catalog-tab-pane-4"
+              type="button" role="tab" aria-controls="catalog-tab-pane-4" aria-selected="false">Конвейерные
+              мойки</button>
+          </li>
+          <li class="ms-auto">
+            <button class="btn-bay-car-wash-primary">
+              <span>Купить автомойку</span>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 16L16 2M16 2H2M16 2V16" stroke-width="1.5"></path>
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="catalogTabContent">
+          <div class="tab-pane fade show active" id="catalog-tab-pane-1" role="tabpanel" aria-labelledby="catalog-tab-1"
+            tabindex="0">
+            <div class="row-menu">
+              <div class="col">
+                <h3 class="title"><a href="">Механика</a></h3>
+                <ul class="menu">
+                  <li><a href="">Рельсы, рамы, вентиляторы</a></li>
+                  <li><a href="">Колеса, ролики</a></li>
+                  <li><a href="">Оси, валы, фланцы</a></li>
+                  <li><a href="">Подшипники</a></li>
+                  <li><a href="">Щетки</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Электрика</a></h3>
+                <ul class="menu">
+                  <li><a href="">Контакторы, пускатели, реле</a></li>
+                  <li><a href="">Автоматы, выключатели</a></li>
+                  <li><a href="">Трансформаторы, блоки питания</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Гидравлика</a></h3>
+                <ul class="menu">
+                  <li><a href="">Насосы</a></li>
+                  <li><a href="">Клапаны</a></li>
+                  <li><a href="">Форсунки</a></li>
+                  <li><a href="">Регуляторы</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Пневматика</a></h3>
+                <ul class="menu">
+                  <li><a href="">Клапаны</a></li>
+                  <li><a href="">Пневмоцилиндры</a></li>
+                  <li><a href="">Регуляторы</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Электрические двигатели</a></h3>
+                <ul class="menu">
+                  <li><a href="">Мотор-редукторы</a></li>
+                  <li><a href="">Электродвигатели насосов</a></li>
+                  <li><a href="">Электродвигатели вентиляторов</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Электроника</a></h3>
+                <ul class="menu">
+                  <li><a href="">Платы</a></li>
+                  <li><a href="">Электронные приборы и устройства</a></li>
+                  <li><a href="">Датчики</a></li>
+                  <li><a href="">Трансформаторы</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Прочее</a></h3>
+                <ul class="menu">
+                  <li><a href="">Крепеж</a></li>
+                  <li><a href="">Энергетические цепи</a></li>
+                  <li><a href="">Кронштейны</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="tab-pane fade" id="catalog-tab-pane-2" role="tabpanel" aria-labelledby="catalog-tab-2"
+            tabindex="0">
+            <div class="row-menu">
+              <div class="col">
+                <h3 class="title"><a href="">Механика</a></h3>
+                <ul class="menu">
+                  <li><a href="">Рельсы, рамы, вентиляторы</a></li>
+                  <li><a href="">Колеса, ролики</a></li>
+                  <li><a href="">Оси, валы, фланцы</a></li>
+                  <li><a href="">Подшипники</a></li>
+                  <li><a href="">Щетки</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Электрика</a></h3>
+                <ul class="menu">
+                  <li><a href="">Контакторы, пускатели, реле</a></li>
+                  <li><a href="">Автоматы, выключатели</a></li>
+                  <li><a href="">Трансформаторы, блоки питания</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Гидравлика</a></h3>
+                <ul class="menu">
+                  <li><a href="">Насосы</a></li>
+                  <li><a href="">Клапаны</a></li>
+                  <li><a href="">Форсунки</a></li>
+                  <li><a href="">Регуляторы</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Пневматика</a></h3>
+                <ul class="menu">
+                  <li><a href="">Клапаны</a></li>
+                  <li><a href="">Пневмоцилиндры</a></li>
+                  <li><a href="">Регуляторы</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Электрические двигатели</a></h3>
+                <ul class="menu">
+                  <li><a href="">Мотор-редукторы</a></li>
+                  <li><a href="">Электродвигатели насосов</a></li>
+                  <li><a href="">Электродвигатели вентиляторов</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Электроника</a></h3>
+                <ul class="menu">
+                  <li><a href="">Платы</a></li>
+                  <li><a href="">Электронные приборы и устройства</a></li>
+                  <li><a href="">Датчики</a></li>
+                  <li><a href="">Трансформаторы</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Прочее</a></h3>
+                <ul class="menu">
+                  <li><a href="">Крепеж</a></li>
+                  <li><a href="">Энергетические цепи</a></li>
+                  <li><a href="">Кронштейны</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="catalog-tab-pane-3" role="tabpanel" aria-labelledby="contact-tab-3"
+            tabindex="0">
+            <div class="row-menu">
+              <div class="col">
+                <h3 class="title"><a href="">Механика</a></h3>
+                <ul class="menu">
+                  <li><a href="">Рельсы, рамы, вентиляторы</a></li>
+                  <li><a href="">Колеса, ролики</a></li>
+                  <li><a href="">Оси, валы, фланцы</a></li>
+                  <li><a href="">Подшипники</a></li>
+                  <li><a href="">Щетки</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Электрика</a></h3>
+                <ul class="menu">
+                  <li><a href="">Контакторы, пускатели, реле</a></li>
+                  <li><a href="">Автоматы, выключатели</a></li>
+                  <li><a href="">Трансформаторы, блоки питания</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Гидравлика</a></h3>
+                <ul class="menu">
+                  <li><a href="">Насосы</a></li>
+                  <li><a href="">Клапаны</a></li>
+                  <li><a href="">Форсунки</a></li>
+                  <li><a href="">Регуляторы</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Пневматика</a></h3>
+                <ul class="menu">
+                  <li><a href="">Клапаны</a></li>
+                  <li><a href="">Пневмоцилиндры</a></li>
+                  <li><a href="">Регуляторы</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Электрические двигатели</a></h3>
+                <ul class="menu">
+                  <li><a href="">Мотор-редукторы</a></li>
+                  <li><a href="">Электродвигатели насосов</a></li>
+                  <li><a href="">Электродвигатели вентиляторов</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Электроника</a></h3>
+                <ul class="menu">
+                  <li><a href="">Платы</a></li>
+                  <li><a href="">Электронные приборы и устройства</a></li>
+                  <li><a href="">Датчики</a></li>
+                  <li><a href="">Трансформаторы</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Прочее</a></h3>
+                <ul class="menu">
+                  <li><a href="">Крепеж</a></li>
+                  <li><a href="">Энергетические цепи</a></li>
+                  <li><a href="">Кронштейны</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="catalog-tab-pane-4" role="tabpanel" aria-labelledby="catalog-tab-4"
+            tabindex="0">
+            <div class="row-menu">
+              <div class="col">
+                <h3 class="title"><a href="">Механика</a></h3>
+                <ul class="menu">
+                  <li><a href="">Рельсы, рамы, вентиляторы</a></li>
+                  <li><a href="">Колеса, ролики</a></li>
+                  <li><a href="">Оси, валы, фланцы</a></li>
+                  <li><a href="">Подшипники</a></li>
+                  <li><a href="">Щетки</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Электрика</a></h3>
+                <ul class="menu">
+                  <li><a href="">Контакторы, пускатели, реле</a></li>
+                  <li><a href="">Автоматы, выключатели</a></li>
+                  <li><a href="">Трансформаторы, блоки питания</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Гидравлика</a></h3>
+                <ul class="menu">
+                  <li><a href="">Насосы</a></li>
+                  <li><a href="">Клапаны</a></li>
+                  <li><a href="">Форсунки</a></li>
+                  <li><a href="">Регуляторы</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Пневматика</a></h3>
+                <ul class="menu">
+                  <li><a href="">Клапаны</a></li>
+                  <li><a href="">Пневмоцилиндры</a></li>
+                  <li><a href="">Регуляторы</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Электрические двигатели</a></h3>
+                <ul class="menu">
+                  <li><a href="">Мотор-редукторы</a></li>
+                  <li><a href="">Электродвигатели насосов</a></li>
+                  <li><a href="">Электродвигатели вентиляторов</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Электроника</a></h3>
+                <ul class="menu">
+                  <li><a href="">Платы</a></li>
+                  <li><a href="">Электронные приборы и устройства</a></li>
+                  <li><a href="">Датчики</a></li>
+                  <li><a href="">Трансформаторы</a></li>
+                </ul>
+              </div>
+              <div class="col">
+                <h3 class="title"><a href="">Прочее</a></h3>
+                <ul class="menu">
+                  <li><a href="">Крепеж</a></li>
+                  <li><a href="">Энергетические цепи</a></li>
+                  <li><a href="">Кронштейны</a></li>
+                  <li><a href="">Прочее</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <header>
+    <div class="wrapper">
+      <div class="top-header">
+        <a href="" class="logo">
+          <img src="images/logo.png" alt="Petromatic" class="img-fluid">
+        </a>
+        <button class="btn-catalog buttonCatalogToggle">
+          <span class="dotes">
+            <span class="dote"></span>
+            <span class="dote"></span>
+            <span class="dote"></span>
+          </span>
+          <span>Каталог запчастей для моек</span>
+        </button>
+        <nav class="nav-menu ms-auto">
+          <ul>
+            <li><a href="">Дилерам</a></li>
+            <li><a href="">О нас</a></li>
+            <li><a href="">Сервис и поддержка</a></li>
+            <li><a href="">Доставка и оплата</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </nav>
+        <a href="" class="btn-login">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2.75" y="3.25" width="9.5" height="14.5" stroke-width="1.5" />
+            <circle cx="8.5" cy="10" r="0.5" />
+            <path d="M10 10H18.5M18.5 10L17.25 8.5L16 7M18.5 10L16 13.5" stroke-width="1.5" />
+          </svg>
+        </a>
+        <a href="" class="btn-cart-small">
+          <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="10" r="0.5" />
+            <path
+              d="M16.75 7.75V15C16.75 16.7949 15.2949 18.25 13.5 18.25H4.5C2.70507 18.25 1.25 16.7949 1.25 15V7.75H16.75Z"
+              stroke-width="1.5" />
+            <path d="M4.5 7L6.5 1.5" stroke-linecap="round" />
+            <path d="M13 7L11 1.5" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </a>
+      </div>
+      <div class="wrap-breadcrumbs">
+        <ul class="breadcrumbs">
+          <li><a href="">
+              <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.50008 0.499908L0 5.37497V13.5001H4.38755V10.0876C4.38755 8.91721 5.32974 7.97503 6.50008 7.97503C7.67042 7.97503 8.6126 8.91721 8.6126 10.0876V13.5001H13.0002V5.37497L6.50008 0.499908Z" />
+              </svg>
+            </a></li>
+          <li><span>Каталог</span></li>
+        </ul>
+        <h1>Каталог запчастей для моек</h1>
+      </div>
+      <div class="header-bottom">
+        <div class="wrap-search">
+          <input name="search" value="" placeholder="Поиск запчасти по артикулу или названию" />
+          <button class="btn-search">
+            <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="8.00011" cy="8.17742" r="6.92742" stroke-width="1.5" />
+              <path d="M12.387 14.2097L15.6773 17.5" stroke-width="1.5" />
+            </svg>
+          </button>
+        </div>
+        <button class="btn-bay-car-wash">
+          <span>Купить автомойку</span>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 16L16 2M16 2H2M16 2V16" stroke-width="1.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <section class="section-catalog-category">
+    <div class="wrapper">
+      <div class="row-category">
+        <div class="item-catagory" style="background-image: url('images/category.png');">
+          <h3><a href="">Легковой портал</a></h3>
+          <ul>
+            <li><a href="">Механика</a></li>
+            <li><a href="">Электрика</a></li>
+            <li><a href="">Гидравлика</a></li>
+            <li><a href="">Пневматика</a></li>
+            <li><a href="">Электрические двигатели</a></li>
+            <li><a href="">Электроника</a></li>
+            <li><a href="">Прочее</a></li>
+          </ul>
+        </div>
+        <div class="item-catagory" style="background-image: url('images/category.png');">
+          <h3><a href="">Грузовой портал</a></h3>
+          <ul>
+            <li><a href="">Механика</a></li>
+            <li><a href="">Электрика</a></li>
+            <li><a href="">Гидравлика</a></li>
+            <li><a href="">Пневматика</a></li>
+            <li><a href="">Электрические двигатели</a></li>
+            <li><a href="">Электроника</a></li>
+            <li><a href="">Прочее</a></li>
+          </ul>
+        </div>
+        <div class="item-catagory" style="background-image: url('images/category.png');">
+          <h3><a href="">Проездные мойки</a></h3>
+          <ul>
+            <li><a href="">Механика</a></li>
+            <li><a href="">Электрика</a></li>
+            <li><a href="">Гидравлика</a></li>
+            <li><a href="">Пневматика</a></li>
+            <li><a href="">Электрические двигатели</a></li>
+            <li><a href="">Электроника</a></li>
+            <li><a href="">Прочее</a></li>
+          </ul>
+        </div>
+        <div class="item-catagory" style="background-image: url('images/category.png');">
+          <h3><a href="">Конвейерные мойки</a></h3>
+          <ul>
+            <li><a href="">Механика</a></li>
+            <li><a href="">Электрика</a></li>
+            <li><a href="">Гидравлика</a></li>
+            <li><a href="">Пневматика</a></li>
+            <li><a href="">Электрические двигатели</a></li>
+            <li><a href="">Электроника</a></li>
+            <li><a href="">Прочее</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-help-info">
+    <div class="wrapper">
+      <div class="row gy-4">
+        <div class="col-12 col-md-4">
+          <div class="title">Если вы не знаете артикул нужной вам запчасти?</div>
+        </div>
+        <div class="col-12 col-md-5">
+          <div class="description col-md-7">Используйте блок с Деталировкой на главной странице</div>
+        </div>
+        <div class="col-12 col-md-3">
+          <a href="" class="btn-read-more"><span>Перейти</span><svg width="10" height="8" viewBox="0 0 10 8" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M-1.5299e-07 4L9 4M9 4L5.4 7.5M9 4L5.4 0.5"></path>
+            </svg></a>
+        </div>
+      </div>
+      <div class="bg-help"></div>
+    </div>
+  </section>
+  <section class="section-content-text">
+    <div class="wrapper">
+      <div class="row gy-4">
+        <div class="col-12 col-md-8 col-lg-8">
+          <h2 class="title">Интернет-магазин запчастей для автомоек</h2>
+        </div>
+        <div class="col-12 col-md-4 col-lg-4 text-center text-md-end">
+          <a href="" class="btn-read-more"><span>Читать о компании</span><svg width="10" height="8" viewBox="0 0 10 8"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M-1.5299e-07 4L9 4M9 4L5.4 7.5M9 4L5.4 0.5"></path>
+            </svg></a>
+        </div>
+      </div>
+      <div class="content-text">
+        <div class="row gy-4">
+          <div class="col-12 col-md-6">
+            <p>Компания Петроматик была основана в 2002 г. Основным и единственным направлением нашей деятельности
+              является проектирование и оснащение автоматических моечных комплексов для любого вида транспорта.  Без
+              преувеличения можно сказать, что компания Петроматик стоит у истоков зарождения  бизнеса
+              автомойки в России, ведь именно открытие нами в 2003 г. в г. Санкт-Петербурге первой коммерческой   мойки
+              «Метроматик»,  работающей на основе высокопроизводительной конвейерной технологии, и положило начало росту
+              популярности автоматических моек в России.</p>
+          </div>
+          <div class="col-12 col-md-6">
+            <p>
+              В настоящее время компания «Петроматик» является официальным представителем  немецкой компании
+              WashTec — общепризнанного европейского лидера среди  производителей автоматических моек для всех видов
+              транспорта.</p>
+              <p>Компания «Петроматик» обеспечивает полное сопровождение своих заказчиков, как в подборе и поставке
+              необходимых запчастей, так и в организации сервисного ремонта. А это значит, что мы можем не только найти
+              необходимую Вам запчасть для любого вида моек, но и оперативно отправить ее любой транспортной компанией.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-form">
+    <div class="wrapper">
+      <div class="row row-title align-items-center gy-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="title">У вас есть вопросы или вы хотите оформить заказ?</div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="description">Напишите нам, мы вернемся к вам с ответом в течение получаса</div>
+        </div>
+      </div>
+      <form action="" class="row form">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="form-group">
+            <label>Ваше имя</label>
+            <input type="text" class="form-control" name="name" placeholder="Только буквы">
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="form-group">
+            <label>Номер телефона</label>
+            <input type="text" class="form-control" name="name" placeholder="В формате +7">
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="form-group">
+            <label>Ваш email</label>
+            <input type="email" class="form-control" name="name" placeholder="@">
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="form-group">
+            <label>Сообщение</label>
+            <textarea name="" class="form-control" placeholder="Чем мы можем вам помочь"></textarea>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="form-group form-group-check mt-md-4">
+            <label>Я соглашаюсь с этими правовыми документами</label>
+            <div class="form-check">
+              <input type="hidden" name="agree_user[]" value="">
+              <input type="checkbox" class="form-check-input check-agree" id="poliwriteUsForm_user" name="agree_user[]"
+                value="agree_user">
+              <label class="form-check-label" for="poliwriteUsForm_user"><a href="polzovatelskoe-soglashenie.html"
+                  target="_blank">Пользовательское соглашение</a></label>
+              <span class="parent-error error_agree_user w-100 d-flex flex-column"></span>
+            </div>
+            <div class="form-check">
+              <input type="hidden" name="agree[]" value="">
+              <input type="checkbox" class="form-check-input check-agree" id="poliwriteUsForm" name="agree[]"
+                value="agree">
+              <label class="form-check-label" for="poliwriteUsForm"><a href="politika-konfidenczialnosti.html"
+                  target="_blank">Политика конфиденциальности</a></label>
+              <span class="parent-error error_agree w-100 d-flex flex-column"></span>
+            </div>
+
+
+          </div>
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 ">
+          <div class="form-group mt-md-4">
+            <button class="btn btn-primary">
+              <span>Отправить</span>
+              <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-1.5299e-07 4L9 4M9 4L5.4 7.5M9 4L5.4 0.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <div class="wrapper">
+      <div class="row row-1">
+        <div class="col-12 col-md-6">
+          <div class="footer-text text-center text-md-start">
+            Интернет-магазин запчастей для автомоек в Санкт-Петербурге и России
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <ul class="menu">
+            <li><a href="">Легковой портал</a></li>
+            <li><a href="">Грузовой портал</a></li>
+            <li><a href="">Проездные мойки</a></li>
+            <li><a href="">Конвейерные мойки</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row row-2 align-items-center">
+        <div class="col-12 col-md-6 text-center text-md-start">
+          <a href="tel:+7 (911) 255-27-78" target="_blank" class="phone">+7 (911) 255-27-78</a>
+        </div>
+        <div class="col-12 col-md-6 col-soc">
+          <a href="mailTo:info@petromatic.ru" target="_blank" class="email">info@petromatic.ru</a>
+          <ul class="soc">
+            <li>
+              <a href="" class="soc-link soc-wk">
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.35055 0.5H0.600146C0.10003 0.5 0 0.722988 0 0.968876C0 1.408 0.593428 3.58596 2.76309 6.46648C4.20953 8.43365 6.24746 9.5 8.10189 9.5C9.21453 9.5 9.35218 9.26316 9.35218 8.8552V7.36842C9.35218 6.89474 9.45758 6.8002 9.80992 6.8002C10.0695 6.8002 10.5146 6.92315 11.5531 7.87161C12.7399 8.99571 12.9356 9.5 13.6032 9.5H15.3536C15.8537 9.5 16.1037 9.26316 15.9595 8.79576C15.8016 8.32993 15.235 7.65407 14.4831 6.85289C14.0751 6.39623 13.4632 5.90445 13.2777 5.6585C13.0181 5.34238 13.0923 5.20184 13.2777 4.92084L13.3089 4.87901C13.5726 4.52394 15.4262 2.00643 15.6329 1.10942C15.7441 0.758131 15.6329 0.5 15.1035 0.5H13.3531C12.908 0.5 12.7029 0.722988 12.5916 0.968876C12.5916 0.968876 11.7014 3.0239 10.4404 4.35877C10.0325 4.74518 9.847 4.86812 9.62446 4.86812C9.51321 4.86812 9.35215 4.74518 9.35215 4.39392V1.10942C9.35215 0.687873 9.22298 0.5 8.85206 0.5H6.10142C5.82329 0.5 5.65602 0.695651 5.65602 0.881076C5.65602 1.2807 6.28649 1.37285 6.35148 2.49698V4.93841C6.35148 5.47368 6.24942 5.57073 6.02688 5.57073C5.43349 5.57073 3.99005 3.50653 3.13395 1.14454C2.96618 0.685447 2.79791 0.5 2.35055 0.5Z" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="" class="soc-link soc-tg">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.2683 10.9194L7.01796 14.2731C7.3858 14.2731 7.54832 14.1227 7.75363 13.9442L9.52091 12.4075L13.1976 14.8365C13.8742 15.1704 14.3626 14.9975 14.5311 14.2748L16.9448 4.10432C17.1919 3.21841 16.5671 2.8166 15.9198 3.07938L1.74706 7.96613C0.779633 8.3131 0.785273 8.79573 1.57071 9.01077L5.20776 10.0258L13.6279 5.27572C14.0254 5.06018 14.3902 5.17605 14.0908 5.41369L7.26809 10.9192L7.2683 10.9194Z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row row-3">
+        <div class="col-12 col-md-6">
+          <ul class="menu-bottom">
+            <li><a href="">Дилерам</a></li>
+            <li><a href="">О нас</a></li>
+            <li><a href="">Сервис и поддержка</a></li>
+            <li><a href="">Доставка и оплата</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="address text-center text-md-end">
+            г. Санкт-Петербург, пр. Энгельса 34
+          </div>
+        </div>
+      </div>
+      <div class="hr"></div>
+      <div class="row row-4">
+        <div class="col-12 col-md-6">
+          <div class="copyright text-center text-md-start">
+            2025 © Петроматик: Запчасти — интернет-магазин оборудования для автомоек
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <ul class="menu-policy">
+            <li><a href="">Карта сайта</a></li>
+            <li><a href="">Пользовательское соглашение</a></li>
+            <li><a href="">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="bg-catalog"></div>
+
+  <script src="assets/template/js/jquery.min.js"></script>
+  <script src="assets/template/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/template/js/swiper-bundle.min.js"></script>
+  <script src="assets/template/js/fancybox.umd.js"></script>
+  <script src="assets/template/js/jquery.nice-select.min.js"></script>
+  <script src="assets/template/js/main.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+body {
+  font-family: $font-primary;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  background-color: $body-color;
+  color: $white;
+}
+.wrapper {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+::-webkit-resizer {
+  background-image: url('');
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 1px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-button {
+  background-image: url();
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background-color: $primary;
+  height: 80px;
+}
+
+::-webkit-scrollbar-track {
+  background: $white;
+}

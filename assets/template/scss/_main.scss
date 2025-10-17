@@ -1,0 +1,97 @@
+.section-main-about {
+  margin-top: 70px;
+  .title {
+    color: $white;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: left;
+    margin-bottom: 20px;
+    width: 70%;
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+  .wrap-text {
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(lg) {
+      flex-wrap: wrap;
+    }
+    .item-first {
+      color: $white;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: left;
+      position: relative;
+      display: flex;
+      gap: 20px;
+      max-width: 300px;
+      height: 125px;
+      padding: 12px 0px 21px 0px;
+      &::before {
+        content: '';
+        display: block;
+        width: 36px;
+        height: 1px;
+        background-color: $white;
+        flex: 0 0 auto;
+        margin-top: 10px;
+      }
+      @include media-breakpoint-down(lg) {
+        max-width: 500px;
+        width: 50%;
+      }
+    }
+    .item {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 100%;
+      letter-spacing: 0;
+      text-align: left;
+      color: $black;
+      max-width: 347px;
+      height: 125px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-end;
+      gap: 10px;
+      padding: 15px 16px 15px 16px;
+      @include border-radius(24px);
+      background-color: $white;
+      @include media-breakpoint-down(lg) {
+        max-width: 500px;
+        width: 50%;
+      }
+    }
+  }
+  .row-advantages {
+    margin-top: 48px;
+    .item {
+      color: $white;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 100%;
+      letter-spacing: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 21px;
+      &::before {
+        content: '';
+        width: 100%;
+        height: 3px;
+        background: $white;
+      }
+      .text {
+        width: 90%;
+      }
+    }
+  }
+  .row-img-video {
+    margin-top: 50px;
+  }
+}

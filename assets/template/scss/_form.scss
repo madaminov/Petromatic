@@ -1,0 +1,94 @@
+.form-group {
+  margin-bottom: 24px;
+  label {
+    color: $black;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+}
+.form-control {
+  color: $black;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
+  padding: 12px 14px 12px 14px;
+  border: 1px solid $gray-3;
+  @include border-radius(32px);
+  background: $white;
+  outline: none;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  &:hover,
+  &:active,
+  &.active {
+    background: $gray;
+    border: 1px solid $gray-3;
+    box-shadow: none;
+  }
+  &:focus {
+    background: $gray;
+    border: 1px solid $gray-3;
+    box-shadow: none;
+  }
+}
+textarea.form-control {
+  @include border-radius(20px);
+  min-height: 130px;
+}
+.form-group-check {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  label {
+    margin-bottom: 0;
+  }
+}
+.form-check {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0px;
+  label {
+    margin-bottom: 0;
+    color: $black;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    flex: 0 0 auto;
+    a {
+      color: $black;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: auto;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+    }
+  }
+}
+
+.form-check-input[type='checkbox'] {
+  border-radius: 8px;
+}
+.form-check-input {
+  width: 24px;
+  height: 24px;
+  margin-top: 0px;
+  margin-right: 13px;
+  border: 1px solid $gray-2;
+  &:checked {
+    background-color: $primary-2;
+    border-color: $gray-3;
+  }
+  &:focus {
+    border-color: $primary-2;
+    outline: 0;
+    box-shadow: none;
+  }
+}
