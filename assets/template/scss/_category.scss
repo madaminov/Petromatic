@@ -1,0 +1,11 @@
+.section-category-products {
+  .wrapper {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: $white;
+    @include border-radius(32px);
+  }
+  .row-products {
+    margin-top: 24px;
+  }
+}

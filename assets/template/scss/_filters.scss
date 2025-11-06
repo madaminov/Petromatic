@@ -1,0 +1,158 @@
+.row-filter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+  .description {
+    width: 100%;
+    color: $black;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .wrap-filter-checkbox + .description {
+    margin-top: 4px;
+  }
+}
+.wrap-filter-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  .form-check {
+    width: auto;
+    padding: 0;
+    input {
+      display: none;
+    }
+    label {
+      color: $black;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      display: flex;
+      height: 30px;
+      padding: 10px 18px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 10px;
+      @include border-radius(97px);
+      border: 1px solid $gray-3;
+      background: $white;
+      @include transition(0.3s);
+      cursor: pointer;
+      &:hover {
+        border: 1px solid $primary-2;
+      }
+    }
+    input[type='checkbox']:disabled + label {
+      color: $gray-2;
+      border: 1px solid $gray-3;
+      cursor: not-allowed;
+    }
+    input[type='checkbox']:checked + label {
+      color: $white;
+      border: 1px solid $primary-2;
+      background: $primary-2;
+    }
+  }
+}
+.dropdown-sorting {
+  button {
+    color: $gray-2;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0;
+    background: none;
+    border: none;
+    @include transition(0.3s);
+    svg {
+      stroke: $gray-2;
+      @include transition(0.3s);
+    }
+    &:hover {
+      color: $primary-2;
+      svg {
+        stroke: $primary-2;
+      }
+    }
+  }
+}
+.wrap-filter-stock {
+  display: flex;
+  border: 1px solid $gray-3;
+  @include border-radius(24px);
+  .form-check {
+    padding: 0;
+    width: auto;
+    min-height: auto;
+    &:first-child {
+      border-right: 1px solid $gray-3;
+    }
+  }
+  input {
+    display: none;
+  }
+  label {
+    color: $gray-2;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 30px;
+    padding: 0px 18px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      color: $black;
+    }
+  }
+  input[type='radio']:checked + label {
+    color: $black;
+  }
+}
+.type-view-products {
+  color: $gray-2;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  button {
+    padding: 0px;
+    border: none;
+    background: none;
+    @include transition(0.3s);
+    svg {
+      fill: $gray-3;
+      @include transition(0.3s);
+    }
+    &:hover {
+      svg {
+        fill: $black;
+        @include transition(0.3s);
+      }
+    }
+    &.active {
+      svg {
+        fill: $black;
+        @include transition(0.3s);
+      }
+    }
+  }
+}

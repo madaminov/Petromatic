@@ -31,6 +31,9 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
+    @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
+    }
     .title {
       color: $black;
       font-size: 20px;
@@ -49,6 +52,10 @@
     background-size: 90%;
     @include media-breakpoint-down(lg) {
       height: 420px;
+    }
+    @include media-breakpoint-down(md) {
+      background-position: 0px 0px;
+      height: 380px;
     }
   }
   .navigation {

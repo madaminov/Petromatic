@@ -41,3 +41,9 @@ body {
 ::-webkit-scrollbar-track {
   background: $white;
 }
+.col-xl-1-of-5 {
+  @include media-breakpoint-up(xl) {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+}

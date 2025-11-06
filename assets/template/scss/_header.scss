@@ -10,6 +10,9 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    @include media-breakpoint-down(md) {
+      gap: 20px;
+    }
   }
   .logo {
     width: 147px;
@@ -70,6 +73,9 @@ header {
       padding: 0;
       margin: 0;
       list-style: none;
+      @include media-breakpoint-down(md) {
+        flex-wrap: wrap;
+      }
       li {
         padding: 0;
         a {
@@ -131,27 +137,36 @@ header {
       gap: 20px 4px;
       align-items: center;
       li {
-        color: $gray-4;
+        color: $white;
         font-size: 14px;
         font-weight: 400;
         line-height: 100%;
-        &::after {
+        &::before {
           content: '—';
+          color: $white;
           display: inline-block;
-          margin-left: 2px;
+          margin-right: 2px;
         }
-        &:last-child::after {
+        &:first-child::before {
           display: none;
         }
-        a {
+        &:last-child::before {
           color: $gray-4;
+        }
+        a {
+          color: $white;
           text-decoration: none;
+          transition: all 0.3s ease;
           &:hover {
-            color: $white;
+            color: $gray-4;
           }
+        }
+        span {
+          color: $gray-4;
         }
         svg {
           fill: $gray-6;
+          transition: all 0.3s ease;
         }
         &:hover {
           svg {
