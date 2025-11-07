@@ -484,7 +484,7 @@
         </div>
         <div class="type-view-products ms-auto">
           <span>Показывать</span>
-          <button class="grid-view active">
+          <button class="grid-view active" id="grid-view">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
               <rect x="1.5" y="1.5" width="4" height="4" />
               <rect x="1.5" y="6.5" width="4" height="4" />
@@ -492,13 +492,13 @@
               <rect x="6.5" y="6.5" width="4" height="4" />
             </svg>
           </button>
-          <button class="list-view">
+          <button class="list-view" id="list-view">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
               <rect x="1.5" y="1.5" width="9" height="4" />
               <rect x="1.5" y="6.5" width="9" height="4" />
             </svg>
           </button>
-          <button class="list-view-2">
+          <button class="list-view-compact" id="list-view-compact">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
               <rect x="4" y="2" width="7" height="2" />
               <rect x="1" y="2" width="2" height="2" />
@@ -510,8 +510,9 @@
           </button>
         </div>
       </div>
-      <div class="row row-products">
-        <div class="col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+      <div class="row row-products gx-12">
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
           <div class="item-product">
             <div class="wrap-img">
               <a href="">
@@ -521,9 +522,25 @@
             <div class="item-body">
               <div class="articul">Арт.: 223531</div>
               <h4 class="name"><a href="">Плата управления мойки CPU в 2 строки</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
               <div class="wrap-price"><span class="price">1.220,60 EUR/шт</span></div>
               <div class="stock">В наличии</div>
               <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
                 <button class="btn-add-cart"><span>В корзину</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <circle cx="10" cy="10" r="0.5" fill="white" />
@@ -541,12 +558,877 @@
                     <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
+                  <span>Быстрый просмотр</span>
                 </button>
               </div>
             </div>
-
           </div>
         </div>
+        <!--end product-->
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+          <div class="item-product">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/products/product-2.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="item-body">
+              <div class="articul">Арт.: 223531</div>
+              <h4 class="name"><a href="">Плата электрическая вход/выход</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
+              <div class="wrap-price"><span class="price">1.144,60 EUR/шт</span></div>
+              <div class="stock">В наличии</div>
+              <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-add-cart"><span>В корзину</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="0.5" fill="white" />
+                    <path d="M18 7.5V15C18 16.933 16.433 18.5 14.5 18.5H5.5C3.567 18.5 2 16.933 2 15V7.5H18Z" />
+                    <path d="M5.5 7L7.5 1.5" stroke-linecap="round" />
+                    <path d="M14 7L12 1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="btn-fast-view">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 6.5C12.6935 6.5 15.1074 7.1014 16.8301 8.04883C18.5707 9.00619 19.5 10.2478 19.5 11.5C19.5 12.7522 18.5707 13.9938 16.8301 14.9512C15.1074 15.8986 12.6935 16.5 10 16.5C7.30645 16.5 4.89257 15.8986 3.16992 14.9512C1.42927 13.9938 0.5 12.7522 0.5 11.5C0.5 10.2478 1.42927 9.00619 3.16992 8.04883C4.89257 7.1014 7.30645 6.5 10 6.5Z" />
+                    <circle cx="9.5" cy="11.5" r="2.5" />
+                    <path d="M4 6L2.8457 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Быстрый просмотр</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end product-->
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+          <div class="item-product">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/products/product-3.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="item-body">
+              <div class="articul">Арт.: 223531</div>
+              <h4 class="name"><a href="">Сальник ввода кабеля (угловой)</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
+              <div class="wrap-price"><span class="price">5,53 EUR/шт</span></div>
+              <div class="stock">В наличии</div>
+              <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-add-cart"><span>В корзину</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="0.5" fill="white" />
+                    <path d="M18 7.5V15C18 16.933 16.433 18.5 14.5 18.5H5.5C3.567 18.5 2 16.933 2 15V7.5H18Z" />
+                    <path d="M5.5 7L7.5 1.5" stroke-linecap="round" />
+                    <path d="M14 7L12 1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="btn-fast-view">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 6.5C12.6935 6.5 15.1074 7.1014 16.8301 8.04883C18.5707 9.00619 19.5 10.2478 19.5 11.5C19.5 12.7522 18.5707 13.9938 16.8301 14.9512C15.1074 15.8986 12.6935 16.5 10 16.5C7.30645 16.5 4.89257 15.8986 3.16992 14.9512C1.42927 13.9938 0.5 12.7522 0.5 11.5C0.5 10.2478 1.42927 9.00619 3.16992 8.04883C4.89257 7.1014 7.30645 6.5 10 6.5Z" />
+                    <circle cx="9.5" cy="11.5" r="2.5" />
+                    <path d="M4 6L2.8457 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Быстрый просмотр</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end product-->
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+          <div class="item-product">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/products/product-4.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="item-body">
+              <div class="articul">Арт.: 223531</div>
+              <h4 class="name"><a href="">Плата CPU K 201</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
+              <div class="wrap-price"><span class="price">1.740,10 EUR/шт</span></div>
+              <div class="stock">В наличии</div>
+              <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-add-cart"><span>В корзину</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="0.5" fill="white" />
+                    <path d="M18 7.5V15C18 16.933 16.433 18.5 14.5 18.5H5.5C3.567 18.5 2 16.933 2 15V7.5H18Z" />
+                    <path d="M5.5 7L7.5 1.5" stroke-linecap="round" />
+                    <path d="M14 7L12 1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="btn-fast-view">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 6.5C12.6935 6.5 15.1074 7.1014 16.8301 8.04883C18.5707 9.00619 19.5 10.2478 19.5 11.5C19.5 12.7522 18.5707 13.9938 16.8301 14.9512C15.1074 15.8986 12.6935 16.5 10 16.5C7.30645 16.5 4.89257 15.8986 3.16992 14.9512C1.42927 13.9938 0.5 12.7522 0.5 11.5C0.5 10.2478 1.42927 9.00619 3.16992 8.04883C4.89257 7.1014 7.30645 6.5 10 6.5Z" />
+                    <circle cx="9.5" cy="11.5" r="2.5" />
+                    <path d="M4 6L2.8457 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Быстрый просмотр</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end product-->
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+          <div class="item-product">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/products/product-5.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="item-body">
+              <div class="articul">Арт.: 223531</div>
+              <h4 class="name"><a href="">Регулировочное кольцо</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
+              <div class="wrap-price"><span class="price">37,90 EUR/шт</span></div>
+              <div class="stock">В наличии</div>
+              <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-add-cart"><span>В корзину</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="0.5" fill="white" />
+                    <path d="M18 7.5V15C18 16.933 16.433 18.5 14.5 18.5H5.5C3.567 18.5 2 16.933 2 15V7.5H18Z" />
+                    <path d="M5.5 7L7.5 1.5" stroke-linecap="round" />
+                    <path d="M14 7L12 1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="btn-fast-view">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 6.5C12.6935 6.5 15.1074 7.1014 16.8301 8.04883C18.5707 9.00619 19.5 10.2478 19.5 11.5C19.5 12.7522 18.5707 13.9938 16.8301 14.9512C15.1074 15.8986 12.6935 16.5 10 16.5C7.30645 16.5 4.89257 15.8986 3.16992 14.9512C1.42927 13.9938 0.5 12.7522 0.5 11.5C0.5 10.2478 1.42927 9.00619 3.16992 8.04883C4.89257 7.1014 7.30645 6.5 10 6.5Z" />
+                    <circle cx="9.5" cy="11.5" r="2.5" />
+                    <path d="M4 6L2.8457 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Быстрый просмотр</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end product-->
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+          <div class="item-product">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/products/product-6.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="item-body">
+              <div class="articul">Арт.: 223531</div>
+              <h4 class="name"><a href="">Турбофорсунка</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
+              <div class="wrap-price"><span class="price">187,50 EUR/шт</span></div>
+              <div class="stock">В наличии</div>
+              <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-add-cart"><span>В корзину</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="0.5" fill="white" />
+                    <path d="M18 7.5V15C18 16.933 16.433 18.5 14.5 18.5H5.5C3.567 18.5 2 16.933 2 15V7.5H18Z" />
+                    <path d="M5.5 7L7.5 1.5" stroke-linecap="round" />
+                    <path d="M14 7L12 1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="btn-fast-view">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 6.5C12.6935 6.5 15.1074 7.1014 16.8301 8.04883C18.5707 9.00619 19.5 10.2478 19.5 11.5C19.5 12.7522 18.5707 13.9938 16.8301 14.9512C15.1074 15.8986 12.6935 16.5 10 16.5C7.30645 16.5 4.89257 15.8986 3.16992 14.9512C1.42927 13.9938 0.5 12.7522 0.5 11.5C0.5 10.2478 1.42927 9.00619 3.16992 8.04883C4.89257 7.1014 7.30645 6.5 10 6.5Z" />
+                    <circle cx="9.5" cy="11.5" r="2.5" />
+                    <path d="M4 6L2.8457 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Быстрый просмотр</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end product-->
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+          <div class="item-product">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/products/product-7.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="item-body">
+              <div class="articul">Арт.: 223531</div>
+              <h4 class="name"><a href="">Фотоприемник</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
+              <div class="wrap-price"><span class="price">178 EUR/шт</span></div>
+              <div class="stock">В наличии</div>
+              <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-add-cart"><span>В корзину</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="0.5" fill="white" />
+                    <path d="M18 7.5V15C18 16.933 16.433 18.5 14.5 18.5H5.5C3.567 18.5 2 16.933 2 15V7.5H18Z" />
+                    <path d="M5.5 7L7.5 1.5" stroke-linecap="round" />
+                    <path d="M14 7L12 1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="btn-fast-view">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 6.5C12.6935 6.5 15.1074 7.1014 16.8301 8.04883C18.5707 9.00619 19.5 10.2478 19.5 11.5C19.5 12.7522 18.5707 13.9938 16.8301 14.9512C15.1074 15.8986 12.6935 16.5 10 16.5C7.30645 16.5 4.89257 15.8986 3.16992 14.9512C1.42927 13.9938 0.5 12.7522 0.5 11.5C0.5 10.2478 1.42927 9.00619 3.16992 8.04883C4.89257 7.1014 7.30645 6.5 10 6.5Z" />
+                    <circle cx="9.5" cy="11.5" r="2.5" />
+                    <path d="M4 6L2.8457 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Быстрый просмотр</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end product-->
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+          <div class="item-product">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/products/product-8.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="item-body">
+              <div class="articul">Арт.: 223531</div>
+              <h4 class="name"><a href="">Демфер соединительной муфты насоса высокого давления</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
+              <div class="wrap-price"><span class="price">45,46 EUR/шт</span></div>
+              <div class="stock">В наличии</div>
+              <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-add-cart"><span>В корзину</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="0.5" fill="white" />
+                    <path d="M18 7.5V15C18 16.933 16.433 18.5 14.5 18.5H5.5C3.567 18.5 2 16.933 2 15V7.5H18Z" />
+                    <path d="M5.5 7L7.5 1.5" stroke-linecap="round" />
+                    <path d="M14 7L12 1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="btn-fast-view">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 6.5C12.6935 6.5 15.1074 7.1014 16.8301 8.04883C18.5707 9.00619 19.5 10.2478 19.5 11.5C19.5 12.7522 18.5707 13.9938 16.8301 14.9512C15.1074 15.8986 12.6935 16.5 10 16.5C7.30645 16.5 4.89257 15.8986 3.16992 14.9512C1.42927 13.9938 0.5 12.7522 0.5 11.5C0.5 10.2478 1.42927 9.00619 3.16992 8.04883C4.89257 7.1014 7.30645 6.5 10 6.5Z" />
+                    <circle cx="9.5" cy="11.5" r="2.5" />
+                    <path d="M4 6L2.8457 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Быстрый просмотр</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end product-->
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+          <div class="item-product">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/products/product-9.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="item-body">
+              <div class="articul">Арт.: 223531</div>
+              <h4 class="name"><a href="">Частотный преобразователь 1,5 кВт</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
+              <div class="wrap-price"><span class="price">986,50 EUR/шт</span></div>
+              <div class="stock">В наличии</div>
+              <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-add-cart"><span>В корзину</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="0.5" fill="white" />
+                    <path d="M18 7.5V15C18 16.933 16.433 18.5 14.5 18.5H5.5C3.567 18.5 2 16.933 2 15V7.5H18Z" />
+                    <path d="M5.5 7L7.5 1.5" stroke-linecap="round" />
+                    <path d="M14 7L12 1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="btn-fast-view">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 6.5C12.6935 6.5 15.1074 7.1014 16.8301 8.04883C18.5707 9.00619 19.5 10.2478 19.5 11.5C19.5 12.7522 18.5707 13.9938 16.8301 14.9512C15.1074 15.8986 12.6935 16.5 10 16.5C7.30645 16.5 4.89257 15.8986 3.16992 14.9512C1.42927 13.9938 0.5 12.7522 0.5 11.5C0.5 10.2478 1.42927 9.00619 3.16992 8.04883C4.89257 7.1014 7.30645 6.5 10 6.5Z" />
+                    <circle cx="9.5" cy="11.5" r="2.5" />
+                    <path d="M4 6L2.8457 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Быстрый просмотр</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end product-->
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+          <div class="item-product">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/products/product-10.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="item-body">
+              <div class="articul">Арт.: 223531</div>
+              <h4 class="name"><a href="">Фотопередатчик</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
+              <div class="wrap-price"><span class="price">100,95 EUR/шт</span></div>
+              <div class="stock">В наличии</div>
+              <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-add-cart"><span>В корзину</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="0.5" fill="white" />
+                    <path d="M18 7.5V15C18 16.933 16.433 18.5 14.5 18.5H5.5C3.567 18.5 2 16.933 2 15V7.5H18Z" />
+                    <path d="M5.5 7L7.5 1.5" stroke-linecap="round" />
+                    <path d="M14 7L12 1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="btn-fast-view">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 6.5C12.6935 6.5 15.1074 7.1014 16.8301 8.04883C18.5707 9.00619 19.5 10.2478 19.5 11.5C19.5 12.7522 18.5707 13.9938 16.8301 14.9512C15.1074 15.8986 12.6935 16.5 10 16.5C7.30645 16.5 4.89257 15.8986 3.16992 14.9512C1.42927 13.9938 0.5 12.7522 0.5 11.5C0.5 10.2478 1.42927 9.00619 3.16992 8.04883C4.89257 7.1014 7.30645 6.5 10 6.5Z" />
+                    <circle cx="9.5" cy="11.5" r="2.5" />
+                    <path d="M4 6L2.8457 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Быстрый просмотр</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end product-->
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+          <div class="item-product">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/products/product-11.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="item-body">
+              <div class="articul">Арт.: 223531</div>
+              <h4 class="name"><a href="">Подшипник ходового колеса</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
+              <div class="wrap-price"><span class="price">127,50 EUR/шт</span></div>
+              <div class="stock">В наличии</div>
+              <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-add-cart"><span>В корзину</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="0.5" fill="white" />
+                    <path d="M18 7.5V15C18 16.933 16.433 18.5 14.5 18.5H5.5C3.567 18.5 2 16.933 2 15V7.5H18Z" />
+                    <path d="M5.5 7L7.5 1.5" stroke-linecap="round" />
+                    <path d="M14 7L12 1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="btn-fast-view">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 6.5C12.6935 6.5 15.1074 7.1014 16.8301 8.04883C18.5707 9.00619 19.5 10.2478 19.5 11.5C19.5 12.7522 18.5707 13.9938 16.8301 14.9512C15.1074 15.8986 12.6935 16.5 10 16.5C7.30645 16.5 4.89257 15.8986 3.16992 14.9512C1.42927 13.9938 0.5 12.7522 0.5 11.5C0.5 10.2478 1.42927 9.00619 3.16992 8.04883C4.89257 7.1014 7.30645 6.5 10 6.5Z" />
+                    <circle cx="9.5" cy="11.5" r="2.5" />
+                    <path d="M4 6L2.8457 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Быстрый просмотр</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end product-->
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+          <div class="item-product">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/products/product-12.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="item-body">
+              <div class="articul">Арт.: 223531</div>
+              <h4 class="name"><a href="">Электрическая плата К5</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
+              <div class="wrap-price"><span class="price">872,43 EUR/шт</span></div>
+              <div class="stock">В наличии</div>
+              <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-add-cart"><span>В корзину</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="0.5" fill="white" />
+                    <path d="M18 7.5V15C18 16.933 16.433 18.5 14.5 18.5H5.5C3.567 18.5 2 16.933 2 15V7.5H18Z" />
+                    <path d="M5.5 7L7.5 1.5" stroke-linecap="round" />
+                    <path d="M14 7L12 1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="btn-fast-view">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 6.5C12.6935 6.5 15.1074 7.1014 16.8301 8.04883C18.5707 9.00619 19.5 10.2478 19.5 11.5C19.5 12.7522 18.5707 13.9938 16.8301 14.9512C15.1074 15.8986 12.6935 16.5 10 16.5C7.30645 16.5 4.89257 15.8986 3.16992 14.9512C1.42927 13.9938 0.5 12.7522 0.5 11.5C0.5 10.2478 1.42927 9.00619 3.16992 8.04883C4.89257 7.1014 7.30645 6.5 10 6.5Z" />
+                    <circle cx="9.5" cy="11.5" r="2.5" />
+                    <path d="M4 6L2.8457 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Быстрый просмотр</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end product-->
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+          <div class="item-product">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/products/product-13.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="item-body">
+              <div class="articul">Арт.: 223531</div>
+              <h4 class="name"><a href="">Резьбовой уплотнительный кабельный ввод</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
+              <div class="wrap-price"><span class="price">3,76 EUR/шт</span></div>
+              <div class="stock">В наличии</div>
+              <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-add-cart"><span>В корзину</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="0.5" fill="white" />
+                    <path d="M18 7.5V15C18 16.933 16.433 18.5 14.5 18.5H5.5C3.567 18.5 2 16.933 2 15V7.5H18Z" />
+                    <path d="M5.5 7L7.5 1.5" stroke-linecap="round" />
+                    <path d="M14 7L12 1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="btn-fast-view">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 6.5C12.6935 6.5 15.1074 7.1014 16.8301 8.04883C18.5707 9.00619 19.5 10.2478 19.5 11.5C19.5 12.7522 18.5707 13.9938 16.8301 14.9512C15.1074 15.8986 12.6935 16.5 10 16.5C7.30645 16.5 4.89257 15.8986 3.16992 14.9512C1.42927 13.9938 0.5 12.7522 0.5 11.5C0.5 10.2478 1.42927 9.00619 3.16992 8.04883C4.89257 7.1014 7.30645 6.5 10 6.5Z" />
+                    <circle cx="9.5" cy="11.5" r="2.5" />
+                    <path d="M4 6L2.8457 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Быстрый просмотр</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end product-->
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+          <div class="item-product">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/products/product-14.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="item-body">
+              <div class="articul">Арт.: 223531</div>
+              <h4 class="name"><a href="">Плата кнопок пульта CP2</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
+              <div class="wrap-price"><span class="price">563,60 EUR/шт</span></div>
+              <div class="stock">В наличии</div>
+              <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-add-cart"><span>В корзину</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="0.5" fill="white" />
+                    <path d="M18 7.5V15C18 16.933 16.433 18.5 14.5 18.5H5.5C3.567 18.5 2 16.933 2 15V7.5H18Z" />
+                    <path d="M5.5 7L7.5 1.5" stroke-linecap="round" />
+                    <path d="M14 7L12 1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="btn-fast-view">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 6.5C12.6935 6.5 15.1074 7.1014 16.8301 8.04883C18.5707 9.00619 19.5 10.2478 19.5 11.5C19.5 12.7522 18.5707 13.9938 16.8301 14.9512C15.1074 15.8986 12.6935 16.5 10 16.5C7.30645 16.5 4.89257 15.8986 3.16992 14.9512C1.42927 13.9938 0.5 12.7522 0.5 11.5C0.5 10.2478 1.42927 9.00619 3.16992 8.04883C4.89257 7.1014 7.30645 6.5 10 6.5Z" />
+                    <circle cx="9.5" cy="11.5" r="2.5" />
+                    <path d="M4 6L2.8457 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Быстрый просмотр</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end product-->
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+          <div class="item-product">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/products/product-15.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="item-body">
+              <div class="articul">Арт.: 223531</div>
+              <h4 class="name"><a href="">Плата пульта управления кнопочная</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
+              <div class="wrap-price"><span class="price">435 EUR/шт</span></div>
+              <div class="stock">В наличии</div>
+              <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-add-cart"><span>В корзину</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="0.5" fill="white" />
+                    <path d="M18 7.5V15C18 16.933 16.433 18.5 14.5 18.5H5.5C3.567 18.5 2 16.933 2 15V7.5H18Z" />
+                    <path d="M5.5 7L7.5 1.5" stroke-linecap="round" />
+                    <path d="M14 7L12 1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="btn-fast-view">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 6.5C12.6935 6.5 15.1074 7.1014 16.8301 8.04883C18.5707 9.00619 19.5 10.2478 19.5 11.5C19.5 12.7522 18.5707 13.9938 16.8301 14.9512C15.1074 15.8986 12.6935 16.5 10 16.5C7.30645 16.5 4.89257 15.8986 3.16992 14.9512C1.42927 13.9938 0.5 12.7522 0.5 11.5C0.5 10.2478 1.42927 9.00619 3.16992 8.04883C4.89257 7.1014 7.30645 6.5 10 6.5Z" />
+                    <circle cx="9.5" cy="11.5" r="2.5" />
+                    <path d="M4 6L2.8457 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Быстрый просмотр</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end product-->
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+          <div class="item-product">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/products/product-16.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="item-body">
+              <div class="articul">Арт.: 223531</div>
+              <h4 class="name"><a href="">Плата RPD</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
+              <div class="wrap-price"><span class="price">1.068,20 EUR/шт</span></div>
+              <div class="stock">В наличии</div>
+              <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-add-cart"><span>В корзину</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="0.5" fill="white" />
+                    <path d="M18 7.5V15C18 16.933 16.433 18.5 14.5 18.5H5.5C3.567 18.5 2 16.933 2 15V7.5H18Z" />
+                    <path d="M5.5 7L7.5 1.5" stroke-linecap="round" />
+                    <path d="M14 7L12 1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="btn-fast-view">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 6.5C12.6935 6.5 15.1074 7.1014 16.8301 8.04883C18.5707 9.00619 19.5 10.2478 19.5 11.5C19.5 12.7522 18.5707 13.9938 16.8301 14.9512C15.1074 15.8986 12.6935 16.5 10 16.5C7.30645 16.5 4.89257 15.8986 3.16992 14.9512C1.42927 13.9938 0.5 12.7522 0.5 11.5C0.5 10.2478 1.42927 9.00619 3.16992 8.04883C4.89257 7.1014 7.30645 6.5 10 6.5Z" />
+                    <circle cx="9.5" cy="11.5" r="2.5" />
+                    <path d="M4 6L2.8457 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Быстрый просмотр</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end product-->
+        <!--product-->
+        <div class="product-layout product-grid col-12 col-md-4 col-lg-3 col-xl-1-of-5">
+          <div class="item-product">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/products/product-17.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="item-body">
+              <div class="articul">Арт.: 223531</div>
+              <h4 class="name"><a href="">Светодиодная лампа</a></h4>
+              <div class="description">Электрическая плата с процессором, предназначенная для управления автоматической
+                мойкой.</div>
+              <div class="wrap-price"><span class="price">44,45 EUR/шт</span></div>
+              <div class="stock">В наличии</div>
+              <div class="wrap-button">
+                <div class="wrap-quantity">
+                  <button class="plus" onclick="plusCount(this)">
+                    <svg width="9" height="8" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.07029 2.57566V4.00366H0.000289187V2.57566H7.07029ZM4.27029 6.59366H2.80029V-0.000344157H4.27029V6.59366Z" />
+                    </svg>
+                  </button>
+                  <input type="text" name="quantity" value="1" />
+                  <button class="minus" onclick="minusCount(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M1.0918 6.77959V5.22559H10.5158V6.77959H1.0918Z" />
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-add-cart"><span>В корзину</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="0.5" fill="white" />
+                    <path d="M18 7.5V15C18 16.933 16.433 18.5 14.5 18.5H5.5C3.567 18.5 2 16.933 2 15V7.5H18Z" />
+                    <path d="M5.5 7L7.5 1.5" stroke-linecap="round" />
+                    <path d="M14 7L12 1.5" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <button class="btn-fast-view">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 6.5C12.6935 6.5 15.1074 7.1014 16.8301 8.04883C18.5707 9.00619 19.5 10.2478 19.5 11.5C19.5 12.7522 18.5707 13.9938 16.8301 14.9512C15.1074 15.8986 12.6935 16.5 10 16.5C7.30645 16.5 4.89257 15.8986 3.16992 14.9512C1.42927 13.9938 0.5 12.7522 0.5 11.5C0.5 10.2478 1.42927 9.00619 3.16992 8.04883C4.89257 7.1014 7.30645 6.5 10 6.5Z" />
+                    <circle cx="9.5" cy="11.5" r="2.5" />
+                    <path d="M4 6L2.8457 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 6L17.1543 4" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.99965 3.00037L10 5.30957" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>Быстрый просмотр</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end product-->
       </div>
     </div>
   </section>

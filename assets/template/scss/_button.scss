@@ -434,15 +434,15 @@
   }
   &:hover,
   &:focus-visible {
-    color: $white;
+    color: $primary-2;
     background-color: $white;
-    border: 1px solid $primary;
+    border: 1px solid $primary-2;
     box-shadow: none;
     svg {
       transform: scale(1.2);
-      stroke: $primary;
+      stroke: $primary-2;
       circle {
-        fill: $primary;
+        fill: $primary-2;
       }
     }
   }
