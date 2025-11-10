@@ -94,6 +94,7 @@ if (document.querySelector('.type-view-products')) {
         'product-layout',
         'product-grid',
         'col-12',
+        'col-sm-6',
         'col-md-4',
         'col-lg-3',
         'col-xl-1-of-5'
@@ -153,3 +154,66 @@ function minusCount(event) {
     parent.querySelector('input[name="quantity"]').value = 1;
   }
 }
+if (document.querySelector('.looked-products-swiper')) {
+  var lookedProductsSwiper = new Swiper('.looked-products-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 28,
+    navigation: {
+      nextEl: '.swiper-button-next-looked-products',
+      prevEl: '.swiper-button-prev-looked-products',
+    },
+    breakpoints: {
+      540: {
+        slidesPerView: 2,
+        spaceBetween: 12,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 12,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 12,
+      },
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 12,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 12,
+      },
+      1240: {
+        slidesPerView: 4,
+        spaceBetween: 12,
+      },
+    },
+  });
+}
+var $select = '';
+$(function () {
+  $select = $('.form__select');
+  if ($select.length) {
+    $select.niceSelect();
+  }
+  $('.scroll-el').on('click', function (e) {
+    e.preventDefault();
+    el = $(this).data('element');
+    if (el == undefined) {
+      el = $(this).attr('href');
+    }
+    $('body,html').animate({ scrollTop: $(el).offset().top - 100 }, 1500);
+  });
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 800 && window_width > 768) {
+      $('.btn-scrollUp').fadeIn();
+    } else {
+      $('.btn-scrollUp').fadeOut();
+    }
+  });
+  $('.btn-scrollUp').click(function () {
+    $('body,html').animate({ scrollTop: 0 }, 400);
+    return false;
+  });
+});

@@ -134,6 +134,13 @@
     transition: opacity 0.3s ease 0.3s, visibilit 0.3s ease 0.3s;
   }
 }
+.price {
+  color: $black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 .section-help-info {
   margin-top: 70px;
   .wrapper {
@@ -196,6 +203,11 @@
   gap: 10px;
   padding: 0px 12px;
   align-items: center;
+  justify-content: space-between;
+  @include border-radius(19px);
+  background: $gray-6;
+  width: 114px;
+  height: 36px;
   button {
     padding: 0;
     background: none;
@@ -227,5 +239,57 @@
     text-align: center;
     box-shadow: none;
     outline: none;
+  }
+}
+.pagination {
+  gap: 5px;
+  margin-bottom: 0;
+  .page-item {
+    &:first-child .page-link {
+      @include border-radius(21px);
+      background: $white;
+    }
+    .page-link {
+      color: $gray-4;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      width: 42px;
+      height: 42px;
+      @include border-radius(21px);
+      background: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &.active > .page-link,
+    .page-link:hover {
+      color: $black;
+      background: $gray-5;
+      border-color: $gray-5;
+    }
+  }
+}
+.looked-products {
+  .title {
+    color: $black;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .row {
+    margin-bottom: 24px;
+  }
+  .navigation-looked-products {
+    display: flex;
+    justify-content: flex-end;
+    gap: 7px;
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: static;
+      margin: 0;
+    }
   }
 }
