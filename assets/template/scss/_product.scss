@@ -1,0 +1,178 @@
+.section-page-product {
+  .wrapper {
+    padding-top: 24px;
+    padding-bottom: 32px;
+    background-color: $white;
+    @include border-radius(32px);
+  }
+  .row-product {
+    .col-wrap-img {
+      @include media-breakpoint-up(xl) {
+        width: 47.5%;
+      }
+    }
+    .col-item-body {
+      @include media-breakpoint-up(xl) {
+        width: 51%;
+      }
+    }
+    .item-body {
+      .articul {
+        color: $gray-4;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 10px;
+      }
+      .description {
+        color: $black;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 10px;
+      }
+      .wrap-price {
+        margin-bottom: 16px;
+        .price {
+          font-size: 20px;
+        }
+      }
+      .wrap-options {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        .form-group {
+          margin-bottom: 0;
+          label {
+            display: inline-block;
+            margin-bottom: 7px;
+          }
+        }
+      }
+      .stock {
+        color: $green;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 12px;
+        &::before {
+          content: '';
+          width: 4px;
+          height: 4px;
+          @include border-radius(50%);
+          background-color: $green;
+          display: inline-block;
+        }
+        &.no-stock {
+          color: $gray-4;
+          &::before {
+            background-color: $gray-4;
+          }
+        }
+      }
+      .wrap-quantity {
+        background-color: $white;
+      }
+      .wrap-button {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .attributes {
+        padding: 16px;
+        margin-top: 32px;
+        @include border-radius(20px);
+        background-color: $gray-5;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        max-width: 589px;
+        .title {
+          color: $black;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          margin-bottom: 8px;
+        }
+        ul {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          li {
+            color: $black;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 0px;
+            padding-left: 5px;
+            &::before {
+              content: '';
+              width: 4px;
+              height: 4px;
+              @include border-radius(50%);
+              background-color: $black;
+              display: inline-block;
+              flex: 0 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  .row-content {
+    margin-top: 70px;
+    .nav-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      border: none;
+      .nav-link {
+        color: $black;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: flex;
+        height: 30px;
+        padding: 10px 18px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        background-color: $white;
+        @include border-radius(97px);
+        border: 1px solid $gray-3;
+        &:hover {
+          color: $primary-2;
+          background-color: $white;
+          border-color: $primary-2;
+        }
+        &.active {
+          background-color: $gray-3;
+          border-color: $gray-3;
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+    }
+    .tab-content {
+      padding-top: 32px;
+    }
+  }
+  .wrapper-swiper-product {
+    margin-top: 70px;
+  }
+}

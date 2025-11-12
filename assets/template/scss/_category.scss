@@ -1,7 +1,7 @@
 .section-category-products {
   .wrapper {
     padding-top: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 32px;
     background-color: $white;
     @include border-radius(32px);
   }
@@ -11,7 +11,7 @@
   .nav-pagination {
     margin-top: 23px;
   }
-  .looked-products {
+  .wrapper-swiper-product {
     margin-top: 70px;
   }
 }
