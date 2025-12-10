@@ -1,7 +1,7 @@
 .section-main-about {
   margin-top: 70px;
   .title {
-    color: $white;
+    color: $black;
     font-size: 30px;
     font-weight: 600;
     line-height: 100%;
@@ -72,7 +72,7 @@
   .row-advantages {
     margin-top: 48px;
     .item {
-      color: $white;
+      color: $black;
       font-size: 18px;
       font-weight: 500;
       line-height: 100%;
@@ -98,8 +98,9 @@
 .section-main-header {
   position: relative;
   z-index: 2;
-  margin-top: 48px;
-  margin-bottom: 42px;
+  padding-top: 16px;
+  padding-bottom: 42px;
+  margin-bottom: 24px;
   .wrap-block {
     .title {
       color: $white;

@@ -65,7 +65,7 @@ header {
   .nav-menu {
     @include border-radius(97px);
     padding: 19px 16px;
-    background: rgba(255, 255, 255, 0.1);
+    background: $primary-2;
     display: inline-flex;
     ul {
       display: flex;
@@ -109,6 +109,7 @@ header {
     background-image: url(../images/bg.png);
     background-position: top right;
     background-repeat: no-repeat;
+    border-radius: 32px;
     position: absolute;
     top: 0;
     left: 0;
@@ -119,6 +120,9 @@ header {
   header {
     .wrapper {
       padding-top: 24px;
+    }
+    .nav-menu {
+      background: rgba(255, 255, 255, 0.1);
     }
   }
 }
@@ -137,13 +141,13 @@ header {
       gap: 20px 4px;
       align-items: center;
       li {
-        color: $white;
+        color: $black-gray;
         font-size: 14px;
         font-weight: 400;
         line-height: 100%;
         &::before {
           content: '—';
-          color: $white;
+          color: $black-gray;
           display: inline-block;
           margin-right: 2px;
         }
@@ -154,29 +158,29 @@ header {
           color: $gray-4;
         }
         a {
-          color: $white;
+          color: $black-gray;
           text-decoration: none;
           transition: all 0.3s ease;
           &:hover {
-            color: $gray-4;
+            color: $black;
           }
         }
         span {
-          color: $gray-4;
+          color: $black-gray;
         }
         svg {
-          fill: $gray-6;
+          fill: $primary-2;
           transition: all 0.3s ease;
         }
         &:hover {
           svg {
-            fill: $white;
+            fill: $primary-2;
           }
         }
       }
     }
     h1 {
-      color: $white;
+      color: $black;
       font-size: 36px;
       font-weight: 600;
       line-height: 100%;

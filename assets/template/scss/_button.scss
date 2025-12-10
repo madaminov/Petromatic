@@ -142,6 +142,7 @@
   align-items: center;
   justify-content: center;
   background-color: $white;
+  border: none;
   @include border-radius(50%);
   transition: all 0.3s ease;
   svg {
@@ -153,6 +154,9 @@
       transform: scale(1.2);
       stroke: $primary;
     }
+  }
+  &::after {
+    display: none;
   }
 }
 .btn-bay-car-wash {
@@ -266,6 +270,25 @@
       transform: scale(1.2);
       transition: all 0.3s ease;
       stroke: $primary;
+    }
+  }
+  &.btn-primary {
+    background-color: $primary-2;
+    color: $white;
+    svg {
+      stroke: $white;
+      transition: all 0.3s ease;
+    }
+    &:hover,
+    &:focus-visible {
+      color: $white;
+      background-color: $primary;
+      border: 0px solid $primary;
+      box-shadow: none;
+      svg {
+        transform: scale(1.2);
+        stroke: $white;
+      }
     }
   }
   &.btn-lg {
