@@ -17449,6 +17449,16 @@ textarea.form-control {
   box-shadow: none;
 }
 
+@media (min-width: 768px) {
+  .modal-dialog {
+    --bs-modal-width: 760px;
+  }
+}
+
+.modal-header {
+  border-bottom: 0px;
+}
+
 @media (min-width: 1200px) {
   .modal-xl {
     --bs-modal-width: 1400px;
@@ -17490,6 +17500,9 @@ textarea.form-control {
 .modal .btn-close:hover {
   color: #0052ce;
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.4053 2.58887L13.9355 3.11914L9.05469 8L13.9355 12.8809L13.4053 13.4121L12.875 13.9424L7.99316 9.06055L3.1123 13.9424L2.58203 13.4121L2.05176 12.8809L6.93262 8L2.05176 3.11914L2.58203 2.58887L3.11328 2.05859L7.99316 6.93848L12.874 2.05859L13.4053 2.58887Z" fill="%230052CE"/></svg>');
+}
+.modal textarea.form-control {
+  min-height: 80px;
 }
 
 .fastViewModal .modal-header {
@@ -19605,6 +19618,108 @@ header .nav-menu ul li.active a {
 }
 .section-page-product .wrapper-swiper-product {
   margin-top: 70px;
+}
+
+.section-contacts {
+  margin-bottom: 24px;
+}
+.section-contacts .wrapper {
+  padding-top: 24px;
+  padding-bottom: 32px;
+  background-color: #fff;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  border-radius: 32px;
+}
+.section-contacts h2, .section-contacts .h2 {
+  color: #1e1e1e;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0%;
+  margin-bottom: 8px;
+}
+.section-contacts .time-work {
+  color: #1e1e1e;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0%;
+  margin-bottom: 32px;
+}
+.section-contacts p {
+  color: #1e1e1e;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.section-contacts p:last-child {
+  margin-bottom: 0;
+}
+.section-contacts .wrap-phone {
+  margin-bottom: 8px;
+}
+.section-contacts .phone {
+  color: #1e1e1e;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0%;
+  text-decoration: none;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.section-contacts .phone:hover {
+  text-decoration: none;
+  color: #0052ce;
+}
+.section-contacts .wrap-email {
+  margin-bottom: 32px;
+}
+.section-contacts .email {
+  color: #0052ce;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0%;
+  text-decoration-line: underline;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.section-contacts .email:hover {
+  text-decoration: none;
+}
+.section-contacts .soc-link svg {
+  fill: #0052ce;
+}
+
+.section-map .wrapper {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #fff;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  border-radius: 32px;
+}
+.section-map .map {
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  border-radius: 32px;
+  overflow: hidden;
 }
 
 .content {

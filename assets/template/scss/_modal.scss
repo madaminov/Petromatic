@@ -1,3 +1,11 @@
+.modal-dialog {
+  @include media-breakpoint-up(md) {
+    --bs-modal-width: 760px;
+  }
+}
+.modal-header {
+  border-bottom: 0px;
+}
 .modal-xl {
   @include media-breakpoint-up(xl) {
     --bs-modal-width: 1400px;
@@ -36,6 +44,9 @@
       color: $primary-2;
       background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.4053 2.58887L13.9355 3.11914L9.05469 8L13.9355 12.8809L13.4053 13.4121L12.875 13.9424L7.99316 9.06055L3.1123 13.9424L2.58203 13.4121L2.05176 12.8809L6.93262 8L2.05176 3.11914L2.58203 2.58887L3.11328 2.05859L7.99316 6.93848L12.874 2.05859L13.4053 2.58887Z" fill="%230052CE"/></svg>');
     }
+  }
+  textarea.form-control {
+    min-height: 80px;
   }
 }
 .fastViewModal {

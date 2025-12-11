@@ -1,0 +1,87 @@
+.section-contacts {
+  margin-bottom: 24px;
+  .wrapper {
+    padding-top: 24px;
+    padding-bottom: 32px;
+    background-color: $white;
+    @include border-radius(32px);
+  }
+  h2 {
+    color: $black;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0%;
+    margin-bottom: 8px;
+  }
+  .time-work {
+    color: $black;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    margin-bottom: 32px;
+  }
+  p {
+    color: $black;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .wrap-phone {
+    margin-bottom: 8px;
+  }
+  .phone {
+    color: $black;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0%;
+    text-decoration: none;
+    @include transition(0.3s);
+    &:hover {
+      text-decoration: none;
+      color: $primary-2;
+    }
+  }
+  .wrap-email {
+    margin-bottom: 32px;
+  }
+  .email {
+    color: $primary-2;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-decoration-line: underline;
+    @include transition(0.3s);
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .soc-link {
+    svg {
+      fill: $primary-2;
+    }
+  }
+}
+.section-map {
+  .wrapper {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: $white;
+    @include border-radius(32px);
+  }
+  .map {
+    @include border-radius(32px);
+    overflow: hidden;
+  }
+}
