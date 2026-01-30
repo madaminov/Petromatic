@@ -340,6 +340,39 @@
       </div>
     </div>
   </section>
+  <section class="section-mobile-menu">
+    <div class="wrapper">
+      <button class="btn-close-primary btn-close-mobile-menu">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11.8535 0.853516L6.70703 6L11.8535 11.1465L11.1465 11.8535L6 6.70703L0.853516 11.8535L0.146484 11.1465L5.29297 6L0.146484 0.853516L0.853516 0.146484L6 5.29297L11.1465 0.146484L11.8535 0.853516Z"
+            fill="white"></path>
+        </svg>
+      </button>
+      <nav class="nav-menu">
+        <ul>
+          <li>
+            <a href="#catalogCollapse" class="dropdown-toggle d-flex justify-content-between align-items-center"
+              data-bs-toggle="collapse" href="#catalogCollapse" role="button" aria-expanded="false"
+              aria-controls="catalogCollapse">Каталог запчастей для моек</a>
+            <div class="collapse pt-3" id="catalogCollapse">
+              <ul>
+                <li><a href="">Легковой портал</a></li>
+                <li><a href="">Грузовой портал</a></li>
+                <li><a href="">Проездные мойки</a></li>
+                <li><a href="">Конвейерные мойки</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="">Дилерам</a></li>
+          <li><a href="">О нас</a></li>
+          <li><a href="">Сервис и поддержка</a></li>
+          <li><a href="">Доставка и оплата</a></li>
+          <li><a href="">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
   <header>
     <div class="wrapper">
       <div class="top-header">
@@ -352,7 +385,7 @@
             <span class="dote"></span>
             <span class="dote"></span>
           </span>
-          <span>Каталог запчастей для моек</span>
+          <span>Каталог <span class="d-none d-xl-inline">запчастей для моек</span></span>
         </button>
         <nav class="nav-menu ms-auto">
           <ul>
@@ -363,7 +396,7 @@
             <li><a href="">Контакты</a></li>
           </ul>
         </nav>
-        <a href="" class="btn-login">
+        <a href="" class="btn-login ms-auto">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="2.75" y="3.25" width="9.5" height="14.5" stroke-width="1.5" />
             <circle cx="8.5" cy="10" r="0.5" />
@@ -380,6 +413,13 @@
             <path d="M13 7L11 1.5" stroke-width="1.5" stroke-linecap="round" />
           </svg>
         </a>
+        <button class="btn-menu-mobile">
+          <span class="dotes">
+            <span class="dote"></span>
+            <span class="dote"></span>
+            <span class="dote"></span>
+          </span>
+        </button>
       </div>
     </div>
   </header>
@@ -653,7 +693,7 @@
       </form>
     </div>
   </section>
- 
+
   <footer>
     <div class="wrapper">
       <div class="row row-1">

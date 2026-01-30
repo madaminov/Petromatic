@@ -4,7 +4,7 @@ body {
   line-height: $line-height;
   font-weight: $font-weight;
   background-color: $body-color;
-  color: $black;  
+  color: $black;
 }
 
 .wrapper {
@@ -35,7 +35,7 @@ body {
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 6px;
   border-radius: 6px;
-  background-color: $primary;
+  background-color: $primary-2;
   height: 80px;
 }
 

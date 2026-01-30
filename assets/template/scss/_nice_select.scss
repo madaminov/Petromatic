@@ -15,7 +15,7 @@
   line-height: 20px;
   outline: none;
   padding-left: 16px;
-  padding-right: 16px;
+  padding-right: 32px;
   padding-top: 5px;
   padding-bottom: 5px;
   position: relative;
@@ -28,6 +28,17 @@
   user-select: none;
   white-space: nowrap;
   width: 100%;
+}
+.nice-select.nice-lg {
+  min-height: 44px;
+}
+.nice-select.nice-lg .current {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nice-select.form__select__white {
+  background-color: $white;
 }
 .nice-select .current {
   text-overflow: ellipsis;
@@ -52,7 +63,7 @@
   margin-top: -6px;
   pointer-events: none;
   position: absolute;
-  right: 20px;
+  right: 16px;
   top: 50%;
   -webkit-transform-origin: 66% 66%;
   -ms-transform-origin: 66% 66%;
@@ -136,6 +147,11 @@
     opacity 0.15s ease-out;
   transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
   z-index: 9;
+  max-height: 400px;
+  overflow-y: auto;
+}
+.nice-select.form__select__white .list {
+  background-color: $white;
 }
 .nice-select .list:hover .option:not(:hover) {
   background-color: transparent !important;
@@ -157,6 +173,12 @@
 .nice-select .option.focus,
 .nice-select .option.selected.focus {
   background-color: $gray-6;
+  color: $primary-2;
+}
+.nice-select.form__select__white .option:hover,
+.nice-select.form__select__white .option.focus,
+.nice-select.form__select__white .option.selected.focus {
+  background-color: $white;
   color: $primary-2;
 }
 .nice-select .option.selected {

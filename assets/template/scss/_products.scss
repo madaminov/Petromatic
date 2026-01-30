@@ -103,6 +103,16 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    .price-old {
+      font-size: 14px;
+      font-weight: 400;
+      color: $black;
+    }
+  }
+  .price-old {
+    font-size: 14px;
+    font-weight: 400;
+    color: $black;
   }
   .stock {
     color: $green;

@@ -88,7 +88,9 @@
 .color-white {
   color: $white !important;
 }
-
+.min-vh-50 {
+  min-height: 50vh;
+}
 .table-primary {
   color: $white;
   background-color: $primary-2;
@@ -263,6 +265,17 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  white-space: nowrap;
+  .price-old {
+    font-size: 14px;
+    font-weight: 400;
+    color: $black;
+  }
+}
+.price-old {
+  font-size: 14px;
+  font-weight: 400;
+  color: $black;
 }
 .section-help-info {
   margin-top: 70px;
@@ -570,5 +583,83 @@
     height: 24px;
     width: 1px;
     background-color: $gray-3;
+  }
+}
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: $primary-2;
+}
+.link-arrow {
+  color: $black;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+  text-decoration: none;
+  padding-right: 16px;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-1.5299e-07 3.85938L9 3.85937M9 3.85937L5.4 7.35937M9 3.85937L5.4 0.359375" stroke="%231E1E1E"/></svg>');
+  transition: all 0.3s ease;
+  &:hover {
+    color: $primary-2;
+    background-image: url('data:image/svg+xml,<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-1.5299e-07 3.85938L9 3.85937M9 3.85937L5.4 7.35937M9 3.85937L5.4 0.359375" stroke="%230052ce"/></svg>');
+  }
+}
+.checking {
+  color: $gray-2;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-decoration: none;
+  padding-left: 20px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.49902 7.14781L6.79659 11.4454L13.499 4.99902" stroke="%23787878" stroke-width="1.5"/></svg>');
+  transition: all 0.3s ease;
+  &.checking-green {
+    color: $green;
+    background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.49902 7.14781L6.79659 11.4454L13.499 4.99902" stroke="%230d9722" stroke-width="1.5"/></svg>');
+  }
+}
+.edit-link {
+  color: $black;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-decoration: none;
+  padding-left: 20px;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.1859 4.39361L6.07496 13.4671L4.33991 13.8056L4.00139 12.0706L10.1123 2.99709L12.1859 4.39361Z" stroke="%23787878" stroke-width="1.5"/><path d="M7.95312 4.85547L11.2708 7.08991" stroke="%23787878" stroke-width="1.5"/></svg>');
+  transition: all 0.3s ease;
+  &:hover {
+    color: $primary-2;
+    background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.1859 4.39361L6.07496 13.4671L4.33991 13.8056L4.00139 12.0706L10.1123 2.99709L12.1859 4.39361Z" stroke="%230052ce" stroke-width="1.5"/><path d="M7.95312 4.85547L11.2708 7.08991" stroke="%230052ce" stroke-width="1.5"/></svg>');
+  }
+}
+.state {
+  color: $white;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  min-width: 88px;
+  width: auto;
+  height: 22px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 3px 10px 3px 10px;
+  border-radius: 97px;
+  &.state-1 {
+    background: $green;
+  }
+  &.state-2 {
+    background: $primary-2;
+  }
+  &.state-3 {
+    background: $gray-4;
   }
 }
