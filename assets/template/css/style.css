@@ -18807,7 +18807,7 @@ header .nav-menu ul li.active a {
   text-align: left;
   text-decoration: none;
   padding-right: 16px;
-  background-position: right top;
+  background-position: right center;
   background-repeat: no-repeat;
   background-image: url('data:image/svg+xml,<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-1.5299e-07 3.85938L9 3.85937M9 3.85937L5.4 7.35937M9 3.85937L5.4 0.359375" stroke="%231E1E1E"/></svg>');
   transition: all 0.3s ease;
@@ -21136,6 +21136,10 @@ header .nav-menu ul li.active a {
   border: 1px solid #c9c9c9;
   border-radius: 24px;
   background: #fff;
+  transition: all 0.3s ease;
+}
+.active-order .item-order:hover {
+  border: 1px solid #0052ce;
 }
 .active-order .item-order .wrap-body {
   display: flex;
