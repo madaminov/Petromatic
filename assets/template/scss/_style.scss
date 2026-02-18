@@ -191,6 +191,14 @@
     }
   }
 }
+.section {
+  .wrapper {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    background-color: $white;
+    @include border-radius(32px);
+  }
+}
 .section-form {
   margin-top: 70px;
   .wrapper {
@@ -649,17 +657,23 @@
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   padding: 3px 10px 3px 10px;
   border-radius: 97px;
   &.state-1 {
-    background: $green;
+    background: $gray-4;
   }
   &.state-2 {
     background: $primary-2;
   }
   &.state-3 {
-    background: $gray-4;
+    background: $green;
   }
+  &.state-5 {
+    background: $green;
+  }
+}
+.cursor-pointer {
+  cursor: pointer;
 }

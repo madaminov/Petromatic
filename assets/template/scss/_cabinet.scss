@@ -6,6 +6,60 @@
     background-color: $white;
     @include border-radius(32px);
   }
+  .title-top {
+    color: $black;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 39px;
+    text-align: left;
+    margin-bottom: 12px;
+    text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+  }
+  .nav-toggle {
+    border: 1px solid $primary-2;
+    background-color: $primary-2;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    height: 42px;
+    overflow: hidden;
+    @include border-radius(97px);
+    .nav-link {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17px;
+      white-space: nowrap;
+      color: $white;
+      flex: 1;
+      text-align: center;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      flex: 0 0 auto;
+      padding: 21px 18px 21px 18px;
+      cursor: pointer;
+      border: none;
+      @include border-radius(97px);
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+      transition: all 0.5s ease;
+      &.active {
+        background-color: $white;
+        transition: all 0.5s ease;
+        color: $black;
+      }
+    }
+  }
+  .tab-content {
+    padding-top: 32px;
+  }
+  .nav-pagination {
+    margin-top: 23px;
+  }
 }
 .account-login {
   .title {
@@ -88,6 +142,19 @@
     font-weight: 600;
     line-height: 24px;
     text-align: left;
+    text-decoration: none;
+  }
+  .tag_collapsed {
+    width: 9px;
+    height: 9px;
+    transition: all 0.3s ease;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml,<svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 5.5L1 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    transform: rotate(90deg);
+    &.collapsed {
+      transform: rotate(0deg);
+    }
   }
   .ul-nav {
     padding-left: 20px;
@@ -103,6 +170,7 @@
         font-weight: 400;
         line-height: 22px;
         text-decoration: none;
+        &.active,
         &:hover {
           color: $primary-2;
         }
@@ -122,8 +190,9 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 22px;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-decoration: none;
+    &.active,
     &:hover {
       color: $primary-2;
     }
@@ -331,6 +400,12 @@
     }
   }
 }
+.widget-hover {
+  transition: all 0.3s ease;
+  &:hover {
+    border-color: $primary-2;
+  }
+}
 .active-order {
   .title {
     color: $black;
@@ -377,6 +452,95 @@
       font-size: 14px;
       font-weight: 400;
       line-height: 17px;
+    }
+  }
+}
+.order-date-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  h3 {
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    color: $black;
+    margin-bottom: 0px;
+  }
+  .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid $gray-3;
+    border-radius: 24px;
+    background: $white;
+    transition: all 0.3s ease;
+    @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
+    }
+    &:hover {
+      border: 1px solid $primary-2;
+    }
+    .col-left {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-content: flex-start;
+      align-items: flex-start;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+    .col-right {
+      width: 50%;
+      border-left: 1px solid $gray-4;
+      padding-left: 12px;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        padding-left: 0px;
+        padding-top: 12px;
+        border-left: 0px;
+        border-top: 1px solid $gray-4;
+      }
+    }
+    .title {
+      font-size: 16px;
+      line-height: normal;
+      font-weight: 600;
+      color: $black;
+    }
+    .shipping_method {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 100%;
+      letter-spacing: 0;
+      color: $black;
+    }
+    .date {
+      color: $gray-2;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 100%;
+      letter-spacing: 0;
+    }
+    .wrap-image {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-content: center;
+      align-items: center;
+      text-align: center;
+      span {
+        color: $gray-2;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0;
+      }
     }
   }
 }

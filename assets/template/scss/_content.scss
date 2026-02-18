@@ -247,7 +247,7 @@
     @include border-radius(24px);
     background: $gray;
   }
-  a {
+  a:not(.btn, .link-arrow, .checking, .edit-link, .state) {
     color: $black;
     text-decoration: underline;
     &:hover {
